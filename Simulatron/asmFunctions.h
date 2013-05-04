@@ -9,11 +9,8 @@
 #ifndef Simulatron_asmFunctions_h
 #define Simulatron_asmFunctions_h
 
-int soma(unsigned long* programCounter, short int* codeMemory, short int* dataMemory);
-int stop(unsigned long* programCounter, short int* codeMemory, short int* dataMemory);
-
-int (*asmFunctions[14])(unsigned long* programCounter, short int* codeMemory, short int* dataMemory);
-
+int (*asmFunctions[14])(unsigned long* programCounter, short int* memory);
+void bindingAsmFuncions();
 extern short int accumulator;
 
 #endif
