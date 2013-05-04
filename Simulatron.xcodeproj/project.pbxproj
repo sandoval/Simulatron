@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		358897BD1735ACC200D8CDF2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 358897BC1735ACC200D8CDF2 /* main.c */; };
 		358897BF1735ACC200D8CDF2 /* Simulatron.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 358897BE1735ACC200D8CDF2 /* Simulatron.1 */; };
+		358897C61735B47300D8CDF2 /* asmFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 358897C51735B47300D8CDF2 /* asmFunctions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		358897B91735ACC200D8CDF2 /* Simulatron */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Simulatron; sourceTree = BUILT_PRODUCTS_DIR; };
 		358897BC1735ACC200D8CDF2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		358897BE1735ACC200D8CDF2 /* Simulatron.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Simulatron.1; sourceTree = "<group>"; };
+		358897C51735B47300D8CDF2 /* asmFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asmFunctions.c; sourceTree = "<group>"; };
+		358897C71735B48600D8CDF2 /* asmFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asmFunctions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				358897BC1735ACC200D8CDF2 /* main.c */,
 				358897BE1735ACC200D8CDF2 /* Simulatron.1 */,
+				358897C51735B47300D8CDF2 /* asmFunctions.c */,
+				358897C71735B48600D8CDF2 /* asmFunctions.h */,
 			);
 			path = Simulatron;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358897BD1735ACC200D8CDF2 /* main.c in Sources */,
+				358897C61735B47300D8CDF2 /* asmFunctions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
