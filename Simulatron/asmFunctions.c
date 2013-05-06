@@ -41,28 +41,31 @@ int div(unsigned long* programCounter, short int* memory) {
 }
 
 int jmp(unsigned long* programCounter, short int* memory) {
-    *programCounter = memory[memory[*programCounter+1]];
+    *programCounter = memory[*programCounter+1];
     return 1;
 }
 
 int jmpn(unsigned long* programCounter, short int* memory) {
     if (accumulator < 0)
-        *programCounter = memory[memory[*programCounter+1]];
-    *programCounter += 2;
+        *programCounter = memory[*programCounter+1];
+    else
+        *programCounter += 2;
     return 1;
 }
 
 int jmpp(unsigned long* programCounter, short int* memory) {
     if (accumulator > 0)
-        *programCounter = memory[memory[*programCounter+1]];
-    *programCounter += 2;
+        *programCounter = memory[*programCounter+1];
+    else
+        *programCounter += 2;
     return 1;
 }
 
 int jmpz(unsigned long* programCounter, short int* memory) {
     if (accumulator == 0)
-        *programCounter = memory[memory[*programCounter+1]];
-    *programCounter += 2;
+        *programCounter = memory[*programCounter+1];
+    else
+        *programCounter += 2;
     return 1;
 }
 
@@ -85,14 +88,14 @@ int store(unsigned long* programCounter, short int* memory) {
 }
 
 int input(unsigned long* programCounter, short int* memory) {
-    printf("\n>>");
+    printf(">> ");
     scanf("%hd",&memory[memory[*programCounter+1]]);
     *programCounter += 2;
     return 1;
 }
 
 int output(unsigned long* programCounter, short int* memory) {
-    printf("\n %hd",memory[memory[*programCounter+1]]);
+    printf("-> %hd\n",memory[memory[*programCounter+1]]);
     *programCounter += 2;
     return 1;
 }
@@ -102,6 +105,8 @@ int stop(unsigned long* programCounter, short int* memory) {
 }
 
 void bindingAsmFuncions(){
+    
+    // Remind that the opcode declared on the documentation is the vector number +1
     
     asmFunctions[0] = add;
     asmFunctions[1] = sub;
