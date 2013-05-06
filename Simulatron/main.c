@@ -72,6 +72,11 @@ int main(int argc, const char * argv[])
         }else if (strlen(argv[1]) >= 3) {
             FILE *file;
             file = fopen(argv[1], "rb");
+            if(file == NULL){
+                printf("\nErro ao ler arquivo\n");
+                fclose(file);
+                exit(3);
+            }
             fread(memory, sizeof(short int), MEMSIZE, file);
             fclose(file);
             
